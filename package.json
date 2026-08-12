@@ -1,0 +1,14 @@
+{
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@mailwoman/sentencepiece-wasm": "^9.0.0",
+    "onnxruntime-web": "^1.27.0"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}

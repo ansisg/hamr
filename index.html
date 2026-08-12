@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    </head>
+    <body>
+        <div id="content" style="opacity: 0; pointer-events: none;">
+            <input id="input-link" type="text" placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ"/>
+            <p id="output-link"></p>
+            <span>
+                <input id="settings-emoji" type="checkbox" name="settings-emoji" autocomplete="off">
+                <label for="settings-emoji">Use emoji in text output</label>
+            </span>
+            <button id="encode-button">Encode</button>
+        </div>
+        <script type="module" src="src/main.js"></script>
+    </body>
+</html>
