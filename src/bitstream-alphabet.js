@@ -65,15 +65,27 @@ export class BitstreamAlphabet {
      * Convert base-N back to BigInt.
      */
     let value = 0n;
+    let position = 0;
 
-    for (const char of text) {
-      const digit = this.lookup.get(char);
+    while (position < text.length) {
+      let match;
+      let digit;
+
+      // Alphabet entries are ordered longest-first.
+      for (const sequence of this.alphabet) {
+        if (text.startsWith(sequence, position)) {
+          match = sequence;
+          digit = this.lookup.get(sequence);
+          break;
+        }
+      }
 
       if (digit === undefined) {
-        throw new Error(`Invalid character: ${char}`);
+        throw new Error(`Invalid character: "${text[position]}"`);
       }
 
       value = value * this.base + BigInt(digit);
+      position += match.length;
     }
 
     /*
@@ -83,7 +95,6 @@ export class BitstreamAlphabet {
 
     while (value > 1n) {
       bits.push(Number(value & 1n));
-
       value >>= 1n;
     }
 

@@ -29,6 +29,7 @@ export async function compress(input, alphabet) {
 export async function decompress(input, alphabet) {
   const alphabet_decoder = new BitstreamAlphabet(alphabet);
   const bits = alphabet_decoder.decode(input);
+  console.log("Bits:", bits);
   const decoded = await coder.decode(bits);
   return decoded;
 }
