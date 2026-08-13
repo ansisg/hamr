@@ -5,5 +5,5 @@ export default defineConfig({
     exclude: ["@agnai/sentencepiece-js"],
   },
   assetsInclude: ["**/*.wasm", "**/*.model"],
-  base: '/',
+  base: '/hamr/',
 });
