@@ -6,7 +6,7 @@ export class GPT {
   }
 
   async load(modelPath) {
-    ort.env.wasm.wasmPaths = "/node_modules/onnxruntime-web/dist/";
+    ort.env.wasm.wasmPaths = '/ort/'
 
     this.session = await ort.InferenceSession.create(modelPath, {
       executionProviders: ["webgpu", "wasm"],
