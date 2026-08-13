@@ -33,8 +33,8 @@ async function updateOutput() {
     const alphabet = settings.emoji ? outputAlphabetEmoji : outputAlphabetASCII;
     const output = await compress(input, alphabet);
     //console.log(`Encoded output: ${output}`);
-    outputLinkElement.textContent = `http://ansisg.github.io#${output}`;
-    outputLinkElement.href = `http://ansisg.github.io#${output}`;
+    outputLinkElement.textContent = `http://t.ha.mr#${output}`;
+    outputLinkElement.href = `http://t.ha.mr#${output}`;
     outputLinkElement.style.color = "";
   } catch (e) {
     outputLinkElement.textContent = "Error: Could not encode input.";
