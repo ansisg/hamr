@@ -5,13 +5,29 @@
         <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
     </head>
     <body>
-        <div id="content" style="opacity: 0; pointer-events: none;">
+        <header>
+            <br>
+            <h1>Link Compressor</h1>
+            <p>Uses a small GPT model to compress web links.</p>
+        </header>
+        <h2 style="text-align: center;" id="loader">Loading...</h2>
+        <div class="notice" id="content" style="opacity: 0; pointer-events: none;">
+            <label>Input link:</label>
             <input id="input-link" type="text" placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ"/>
-            <p id="output-link"></p>
-            <span>
-                <input id="settings-emoji" type="checkbox" name="settings-emoji" autocomplete="off">
-                <label for="settings-emoji">Use emoji in text output</label>
-            </span>
+            <br><br>
+            <label>Output format:</label>
+            <label>
+                <input checked="checked" name="output-format" type="radio" value="use-ascii">
+                Text
+            </label>
+            <label>
+                <input id="settings-emoji" type="radio" name="output-format" value="use-emoji">
+                Emoji
+            </label>
+            <br>
+            <label>Output link:</label>
+            <code id="output-link">...</code>
+            <br><br>
             <button id="encode-button">Encode</button>
         </div>
         <script type="module" src="src/main.js"></script>

@@ -76,6 +76,7 @@ encodeButtonElement.addEventListener("click", updateOutput);
     }
   }
 
+  document.querySelector("#loader").style.display = "none";
   document.querySelector("#content").style.opacity = 1;
   document.querySelector("#content").style.pointerEvents = "auto";
 })();
