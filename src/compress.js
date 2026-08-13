@@ -6,11 +6,11 @@ export let coder = null;
 export async function initialize() {
 
   const tokenizer = new Tokenizer();
-  await tokenizer.load("/model/sentencepiece_32k.model");
+  await tokenizer.load("/hamr/model/sentencepiece_32k.model");
   console.log("Vocabulary size:", tokenizer.vocabSize());
   const model = new GPT();
 
-  await model.load("./model/gpt.onnx");
+  await model.load("/hamr/model/gpt.onnx");
   coder = new ArithmeticCoder({
     precision: 64,
     freqPrecision: 32,
