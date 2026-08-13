@@ -10,7 +10,7 @@ export async function initialize() {
   console.log("Vocabulary size:", tokenizer.vocabSize());
   const model = new GPT();
 
-  await model.load("/model/gpt.onnx");
+  await model.load("./model/gpt.onnx");
   coder = new ArithmeticCoder({
     precision: 64,
     freqPrecision: 32,
