@@ -1,5 +1,5 @@
 import { Tokenizer } from "./tokenizer.js";
-import { GPT } from "./gpt.js";
+import { GPT } from "./model.js";
 import { ArithmeticCoder } from "./arithmetic-coder.js";
 import { BitstreamAlphabet } from "./bitstream-alphabet.js";
 export let coder = null;
